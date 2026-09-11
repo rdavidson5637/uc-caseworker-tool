@@ -1,0 +1,123 @@
+UNIVERSAL CREDIT - SANCTIONS
+Source: gov.uk/guidance/universal-credit-sanctions (retrieved 7 August 2026, last updated by DWP 6 April 2026)
+Note: the brief's original URL gov.uk/government/publications/universal-credit-sanctions no longer resolves; this is the current DWP detailed guide. Applies to England, Scotland and Wales.
+
+WHAT A SANCTION IS
+
+To get Universal Credit payments, you need to accept an agreement called a 'claimant commitment'. This includes 'work-related requirements' - any work-related activities you must complete to receive Universal Credit.
+
+What you must do depends on your circumstances. It could include appointments with your work coach, updating your CV, and searching for jobs.
+
+You must do everything you agree to as part of your commitment or your payment may be reduced. This is called a sanction.
+
+HOW TO AVOID A SANCTION
+
+Make sure you understand all the things you must do to receive Universal Credit, and what will happen if you do not complete one or more of your work-related activities.
+
+To avoid a sanction you must do all the things you have agreed to as part of your claimant commitment, such as:
+- going to all Universal Credit appointments on time and taking part in interviews
+- doing everything you have agreed to do to find work, such as taking part in training courses and applying for suitable jobs
+
+Make sure your claimant commitment is based on your current circumstances by reporting changes in your circumstances.
+
+IF YOU CANNOT MEET YOUR COMMITMENTS
+
+If you are not able to do the things in your claimant commitment, you must make contact straight away by adding a note to your journal in your Universal Credit account, or using the contact details provided by your work coach. For example, if:
+- you have a hospital appointment at the same time as a meeting
+- you are unexpectedly ill and cannot do a work-related activity
+- a domestic emergency means you cannot go to a job interview
+
+If DWP decides you had a good reason, your payment will not be reduced. If DWP decides you did not have a good reason, you may get a sanction.
+
+IF YOU GET A SANCTION
+
+Your next Universal Credit payment, or series of payments, will be reduced. You will get a journal message or a letter telling you:
+- how much your payment is reduced by
+- how long the sanction may be for or what you need to do to end the sanction
+- what you failed to do
+
+You will not have 2 sanctions at once, but sanctions can run back-to-back.
+
+HOW MUCH YOUR PAYMENTS WILL BE REDUCED BY
+
+A sanction reduces the amount of Universal Credit standard allowance you receive.
+
+Payments are reduced by 100% of the standard allowance rate for each day the sanction is in place. If you are aged 16 or 17, or if your only responsibility is to attend appointments to discuss work, payments are reduced by 40% of the standard allowance rate per day.
+
+If your payments are already reduced due to earnings or other income and there is not enough Universal Credit to take the full sanction amount, payments are reduced to nil and the sanction is regarded as fully applied.
+
+Extra amounts on top of the standard allowance, such as for children or housing costs, are still paid.
+
+You may lose entitlement to other benefits, such as financial help with NHS costs, if you get a sanction.
+
+DAILY REDUCTION RATES (from 6 April 2026)
+
+- Single under 25: £11.10 (100% rate) / £4.40 (40% rate)
+- Single 25 or over: £13.90 / £5.50
+- Joint claimants both under 25 (per sanctioned claimant): £8.60 / £3.40
+- Joint claimants, one or both 25 or over (per sanctioned claimant): £10.90 / £4.30
+
+The daily reduction rate could change if the amount of Universal Credit paid or circumstances change.
+
+WHEN YOU MIGHT HAVE LESS MONEY TAKEN OFF
+
+You might have less money taken off in some circumstances, for example:
+- you are caring for young children and people with disabilities
+- you are pregnant and your baby is due in less than 11 weeks
+- you had a baby less than 15 weeks ago
+- you are adopting a child, and it is less than one year since the child was placed with you
+
+SANCTION LEVELS
+
+There are 4 sanction levels depending on which work-related activity (conditionality) group you are in: lowest, low, medium and high.
+
+LOWEST LEVEL SANCTIONS
+
+For claimants whose only responsibility is to take part in appointments to discuss work, who do not take part without good reason.
+
+These sanctions last from the date of the appointment until the day before you contact DWP to arrange a new one. You must take part in the new appointment.
+
+LOW LEVEL SANCTIONS
+
+Most Universal Credit sanctions are low level. You may get one if, without good reason, you fail to:
+- attend and take part in work-focused interviews or appointments (where a lowest level sanction does not apply)
+- provide work-related evidence that has been asked for
+- report work-related changes such as losing pay
+- go to or take part in a training course or employment scheme recommended as part of work preparation
+- take a specific action to get paid work or increase earnings
+
+Duration (aged 18 or over): from the date of the failure until the day before you do the activity, plus a fixed number of extra days. If no sanction in the last 365 days, the extra days are usually 7. If sanctioned in the last 365 days, extra days escalate based on the most recent sanction: 7 extra days leads to 14, 14 leads to 28, 28 stays at 28. If the previous low level sanction was within the last 14 days, the extra days do not go up.
+
+Duration (aged 16 or 17): if no low level sanction in the last 365 days, it lasts until the day before you do the activity. If sanctioned in the last 15 to 365 days, plus an extra 7 days. If within the last 14 days, plus the same number of extra days as the most recent sanction.
+
+MEDIUM LEVEL SANCTIONS
+
+For not doing enough to look for work or not being available for work. You may get one if, without good reason, you:
+- have to look for work but do not apply for a particular job when told to do so
+- do not take all reasonable actions to find paid work or increase earnings
+- have to be available for job interviews but are not available to attend or start work
+- have to be available for work but are not able and willing to do paid work immediately
+
+Duration: 28 days (4 weeks) for the first medium level sanction in any 365-day period. If there has been a medium level sanction in the past year, but not within the last 14 days, it might last 91 days (13 weeks).
+
+16 and 17 year olds: usually 7 days, or 14 days if there has been a medium level sanction in the past year.
+
+HIGH LEVEL SANCTIONS
+
+For certain types of failures to do with paid work. You may get one if you:
+- have to look for work but do not apply for a particular job when told to do so without good reason
+- have to be available for work but fail to accept a job offered to you without good reason
+- leave a job or lose pay by choice while claiming Universal Credit or just before you claim, without a good reason
+- leave a job or lose pay due to misconduct, while claiming or just before claiming
+
+Duration: 91 days (about 3 months) for the first high level sanction in any 365-day period. If there has been a high level sanction in the past year, but not within the last 14 days, up to a maximum of 182 days (about 6 months). Special rules apply if you left work or failed to take up a job offer before claiming.
+
+16 and 17 year olds: usually 14 days, or 28 days if there has been a high level sanction in the past year.
+
+IF YOU DISAGREE WITH A SANCTION DECISION
+
+If you disagree with a sanction decision, or have more evidence, you can ask for a review. This is known as a mandatory reconsideration. You can do this by putting a note in your journal, over the phone, face to face or in writing.
+
+FINANCIAL HELP IF YOUR PAYMENT IS REDUCED
+
+If you cannot pay for rent, heating, food or hygiene needs because of a sanction, you can ask for a hardship payment. You repay the hardship payment through your Universal Credit payments, which will be lower until it is paid back.

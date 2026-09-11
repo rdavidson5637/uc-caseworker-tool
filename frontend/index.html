@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UC Caseworker Assistant</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="govuk-skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="govuk-header">
+    <div class="govuk-header__inner">
+      <p class="govuk-header__product">
+        <a class="govuk-header__link" href="/">UC Caseworker Assistant</a>
+      </p>
+    </div>
+  </header>
+
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-tag--blue">Prototype</strong>
+      This is not an official DWP product. Synthetic data only. AI drafts, caseworker decides.
+    </p>
+  </div>
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper" id="main-content">
+      <h1 class="govuk-heading-xl">UC Caseworker Assistant</h1>
+      <p class="govuk-body-l">Draft journal replies, populate standard letters, and write internal case notes. Nothing is sent automatically.</p>
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <ul class="govuk-tabs__list" role="tablist" aria-label="Assistant tools">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+            <a class="govuk-tabs__tab" href="#panel-journal" id="tab-journal" role="tab" aria-controls="panel-journal" aria-selected="true" tabindex="0">Journal response</a>
+          </li>
+          <li class="govuk-tabs__list-item" role="presentation">
+            <a class="govuk-tabs__tab" href="#panel-letter" id="tab-letter" role="tab" aria-controls="panel-letter" aria-selected="false" tabindex="-1">Letter population</a>
+          </li>
+          <li class="govuk-tabs__list-item" role="presentation">
+            <a class="govuk-tabs__tab" href="#panel-note" id="tab-note" role="tab" aria-controls="panel-note" aria-selected="false" tabindex="-1">Case note</a>
+          </li>
+        </ul>
+
+        <!-- ================= Journal ================= -->
+        <section class="govuk-tabs__panel" id="panel-journal" role="tabpanel" aria-labelledby="tab-journal">
+          <h2 class="govuk-heading-l">Journal response</h2>
+          <p class="govuk-body">Paste a claimant journal message. The assistant classifies safeguarding first, then drafts a reply from the matching GOV.UK guidance only.</p>
+
+          <div class="example-row no-print" id="journal-examples" aria-label="Load a synthetic example"></div>
+
+          <div id="journal-error-summary" class="govuk-error-summary" hidden role="alert" tabindex="-1">
+            <h2 class="govuk-error-summary__title">There is a problem</h2>
+            <ul class="govuk-error-summary__list" id="journal-error-list"></ul>
+          </div>
+
+          <div class="govuk-form-group" id="journal-group">
+            <label class="govuk-label" for="journal-input">Claimant journal message (synthetic)</label>
+            <div class="govuk-hint" id="journal-hint">Do not paste real claimant data into this prototype.</div>
+            <p class="govuk-error-message" id="journal-error" hidden></p>
+            <textarea class="govuk-textarea" id="journal-input" rows="7" maxlength="5000" aria-describedby="journal-hint journal-count"></textarea>
+            <div class="govuk-character-count" id="journal-count">5000 characters remaining</div>
+          </div>
+
+          <div class="govuk-button-group no-print">
+            <button type="button" class="govuk-button" id="journal-submit">Draft response</button>
+          </div>
+          <p class="govuk-hint" id="journal-status" aria-live="polite"></p>
+
+          <div id="journal-safeguarding" hidden></div>
+
+          <div id="journal-output-section" class="review-panel" hidden>
+            <h3 class="govuk-heading-m">Draft for review</h3>
+            <p class="review-note">This is a draft. Nothing is sent automatically. Edit it before you copy it into the journal.</p>
+            <textarea class="govuk-textarea" id="journal-output" rows="12" aria-label="Draft journal response for review"></textarea>
+            <div class="govuk-button-group no-print">
+              <button type="button" class="govuk-button govuk-button--secondary" id="journal-copy-draft" data-copy="journal-output">Copy draft</button>
+            </div>
+            <p class="copy-status" id="journal-copy-draft-status" hidden>Draft copied</p>
+
+            <p class="govuk-body" id="journal-guidance-ref"></p>
+
+            <div id="journal-checklist-wrap" hidden>
+              <h3 class="govuk-heading-m">Caseworker checklist</h3>
+              <ul class="govuk-list govuk-list--bullet" id="journal-checklist"></ul>
+            </div>
+
+            <div id="journal-note-wrap" hidden>
+              <h3 class="govuk-heading-m">Suggested case note</h3>
+              <p class="govuk-hint">Internal only. Do not send this to the claimant.</p>
+              <textarea class="govuk-textarea" id="journal-case-note" rows="8" aria-label="Suggested internal case note"></textarea>
+              <div class="govuk-button-group no-print">
+                <button type="button" class="govuk-button govuk-button--secondary" id="journal-copy-note" data-copy="journal-case-note">Copy case note</button>
+              </div>
+              <p class="copy-status" id="journal-copy-note-status" hidden>Case note copied</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= Letters ================= -->
+        <section class="govuk-tabs__panel" id="panel-letter" role="tabpanel" aria-labelledby="tab-letter" hidden>
+          <h2 class="govuk-heading-l">Letter population</h2>
+          <p class="govuk-body">Fill the form or paste the case to-do. The assistant extracts values into the form. The letter is then filled by template replacement — the AI does not rewrite legal wording.</p>
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <span>These are demonstration templates, not official UCD letters. Do not send them to a claimant.</span>
+          </div>
+
+          <div id="letter-error-summary" class="govuk-error-summary" hidden role="alert" tabindex="-1">
+            <h2 class="govuk-error-summary__title">There is a problem</h2>
+            <ul class="govuk-error-summary__list" id="letter-error-list"></ul>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="letter-type">Letter type</label>
+            <select class="govuk-select" id="letter-type">
+              <option value="UCD157">UCD 157 — Hardship payment payable</option>
+              <option value="UCD173">UCD 173 — Underpayment, no arrears due</option>
+              <option value="UCD367">UCD 367 — Overpayment without civil penalty</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="paste-input">Paste case details</label>
+            <div class="govuk-hint" id="paste-hint">Copy the whole case to-do (Ctrl+A, Ctrl+C), paste it here, then choose Fill fields from paste. Use a synthetic example if you are demonstrating the tool.</div>
+            <textarea class="govuk-textarea" id="paste-input" rows="7" maxlength="20000" aria-describedby="paste-hint"></textarea>
+          </div>
+          <div class="govuk-button-group no-print">
+            <button type="button" class="govuk-button govuk-button--secondary" id="paste-fill">Fill fields from paste</button>
+            <button type="button" class="govuk-button govuk-button--secondary" id="letter-load-example">Load example for this letter</button>
+          </div>
+          <p class="govuk-hint" id="paste-live" aria-live="polite"></p>
+          <div id="paste-status" class="status-note" hidden></div>
+
+          <div id="letter-fields"></div>
+
+          <div class="govuk-button-group no-print">
+            <button type="button" class="govuk-button" id="letter-submit">Generate letter</button>
+          </div>
+          <p class="govuk-hint" id="letter-status" aria-live="polite"></p>
+
+          <div id="letter-warnings" hidden></div>
+
+          <div id="letter-output-section" class="review-panel" hidden>
+            <h3 class="govuk-heading-m">Draft for review</h3>
+            <p class="review-note">This is a draft. Nothing is sent automatically. Check every figure and date before you use it.</p>
+            <textarea class="govuk-textarea" id="letter-output" rows="18" aria-label="Populated letter for review"></textarea>
+            <div class="govuk-button-group no-print">
+              <button type="button" class="govuk-button govuk-button--secondary" id="letter-copy" data-copy="letter-output">Copy letter</button>
+              <button type="button" class="govuk-button govuk-button--secondary" id="letter-print">Print letter</button>
+            </div>
+            <p class="copy-status" id="letter-copy-status" hidden>Letter copied</p>
+          </div>
+        </section>
+
+        <!-- ================= Case note ================= -->
+        <section class="govuk-tabs__panel" id="panel-note" role="tabpanel" aria-labelledby="tab-note" hidden>
+          <h2 class="govuk-heading-l">Case note</h2>
+          <p class="govuk-body">Paste a to-do dump or a short situation summary. The assistant drafts an internal note only. It is never sent to the claimant.</p>
+
+          <div class="example-row no-print">
+            <button type="button" class="govuk-button govuk-button--secondary" id="note-load-example">Load example to-do</button>
+          </div>
+
+          <div id="note-error-summary" class="govuk-error-summary" hidden role="alert" tabindex="-1">
+            <h2 class="govuk-error-summary__title">There is a problem</h2>
+            <ul class="govuk-error-summary__list" id="note-error-list"></ul>
+          </div>
+
+          <div class="govuk-form-group" id="note-group">
+            <label class="govuk-label" for="note-input">Case details (synthetic)</label>
+            <div class="govuk-hint" id="note-hint">Internal note only. Do not paste real claimant data into this prototype.</div>
+            <p class="govuk-error-message" id="note-error" hidden></p>
+            <textarea class="govuk-textarea" id="note-input" rows="8" maxlength="8000" aria-describedby="note-hint note-count"></textarea>
+            <div class="govuk-character-count" id="note-count">8000 characters remaining</div>
+          </div>
+
+          <div class="govuk-button-group no-print">
+            <button type="button" class="govuk-button" id="note-submit">Draft case note</button>
+          </div>
+          <p class="govuk-hint" id="note-status" aria-live="polite"></p>
+
+          <div id="note-safeguarding" hidden></div>
+
+          <div id="note-output-section" class="review-panel" hidden>
+            <h3 class="govuk-heading-m">Draft for review</h3>
+            <p class="review-note">Internal only. Nothing is sent automatically, and nothing is sent to the claimant.</p>
+            <textarea class="govuk-textarea" id="note-output" rows="12" aria-label="Draft internal case note for review"></textarea>
+            <div class="govuk-button-group no-print">
+              <button type="button" class="govuk-button govuk-button--secondary" id="note-copy" data-copy="note-output">Copy case note</button>
+            </div>
+            <p class="copy-status" id="note-copy-status" hidden>Case note copied</p>
+
+            <div id="note-checklist-wrap" hidden>
+              <h3 class="govuk-heading-m">Caseworker checklist</h3>
+              <ul class="govuk-list govuk-list--bullet" id="note-checklist"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="govuk-footer">
+    <div class="govuk-width-container">
+      <p>Portfolio demonstration. Synthetic data only. Not an official DWP product.</p>
+      <p>Guidance text is Crown copyright, used under the Open Government Licence v3.0.</p>
+      <p>A live service would need approved hosting, a DPIA, audit logging, Welsh language, zero-retention AI terms, and local safeguarding procedures. This prototype does not replace the Six Point Plan or any other DWP procedure.</p>
+    </div>
+  </footer>
+
+  <script src="/examples.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
