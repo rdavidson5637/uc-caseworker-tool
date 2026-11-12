@@ -1,6 +1,17 @@
-# Cursor prompts - run in order, test after each
+# Build log: original Cursor prompts
 
-Delete this file before pushing to GitHub, or keep it as build documentation. Either works, but decide deliberately.
+> **This is a historical build log, not current documentation.** These are the prompts used to scaffold the first version of this tool in Cursor, one step at a time with a test after each. The design changed after this first pass, so parts of it no longer match the code:
+>
+> - **Letters are not written by the AI.** Prompt 4 had the model populate the letter templates. The shipped version fills letters by deterministic string replacement in `backend/letter-templates.js`, and `backend/letter-validate.js` flags problems such as an end date before a start date. The AI only extracts form fields from pasted case text. It never touches the letter.
+> - **Journal replies load only the matching guidance.** Prompt 3 sent every guidance file on every request. The shipped version classifies the message for safeguarding and topic first, then loads only the relevant files from `data/`.
+> - **There is a third tool.** The Case Note Assistant was added later and is not covered here.
+> - **The frontend was split out and restyled.** Prompts 5 to 8 and 10 build everything inside `index.html` on PicoCSS. The shipped version has separate `app.js`, `styles.css` and `examples.js`, styled to GOV.UK Design System patterns.
+>
+> See [README.md](README.md) for how the tool works now.
+
+---
+
+Run in order, test after each.
 
 Before prompt 1: `npm install`, copy `.env.example` to `.env`, add your real API key. Confirm `git status` does not show `.env` or `node_modules` before your first commit.
 
